@@ -1,18 +1,24 @@
 SHELL := /bin/bash
 
-.PHONY: up down status clean help
+.PHONY: help up down status
 
 help:
-	@echo "Usage:"
+	@echo "Crossplane Monorepo - Available Commands:"
+	@echo ""
+	@echo "Infrastructure (Dev Environment):"
 	@echo "  make up      - Create Kind cluster and HTTPS registry"
-	@echo "  make status  - Show status of the cluster and registry"
-	@echo "  make down    - Destroy everything"
+	@echo "  make down    - Destroy cluster and registry"
+	@echo "  make status  - Show status of cluster and registry"
+	@echo ""
+	@echo "For more commands, see:"
+	@echo "  make -C infra help"
 
+# Infrastructure commands (delegate to infra/)
 up:
-	./scripts/cluster.sh up
-
-status:
-	./scripts/cluster.sh status
+	./infra/scripts/cluster.sh up
 
 down:
-	./scripts/cluster.sh down
+	./infra/scripts/cluster.sh down
+
+status:
+	./infra/scripts/cluster.sh status
