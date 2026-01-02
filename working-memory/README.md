@@ -32,6 +32,16 @@ Step-by-step guide for making your first commit:
 - Files that are safe to commit vs. files that are protected
 - Troubleshooting common git issues
 
+### `MONOREPO_STRUCTURE.md`
+Comprehensive plan for transforming this repository into a Crossplane development monorepo:
+- Proposed directory structure for functions, providers, and configurations
+- Migration strategy from current setup
+- Design principles and best practices
+- Root Makefile and Tiltfile integration
+- Local development workflow
+- CI/CD considerations
+- Versioning strategy
+
 ## 🎯 Purpose
 
 These documents were created to:
